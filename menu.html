@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menus</title>
+    <!--Font awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!--Scroll reveal CDN-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesMenu.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</head>
+<body>
+<script src="main.js"></script>
+<header>
+    <div class="container">
+        <nav class="nav">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="index.html" class="logo">Takia</a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active"> Home </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="team.php" class="nav-link">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- end header-->
+<section class="start">
+    <div class="slide hi-slide">
+        <ul>
+            <li>
+                <img src="./images/slide1.jpg">
+            </li>
+            <li>
+                <img src="./images/slide2.jpg">
+            </li>
+            <li>
+                <img src="./images/slide3.jpg">
+            </li>
+            <li>
+                <img src="./images/slide4.jpg">
+            </li>
+            <li>
+                <img src="./images/slide5.jpg">
+            </li>
+            <li>
+                <img src="./images/slide6.jpg">
+            </li>
+            <li>
+                <img src="./images/yum5.jpg">
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script>
+    $('.slide').hiSlide();
+</script>
+<section class="discover-our-menu">
+    <div class="container">
+        <div class="restaurant-description padding-right animate-left">
+            <div class="global-headline">
+                <h2 class="sub-headline">
+                    <span class="first-letter">D</span>cover our menu
+                </h2>
+            </div>
+        </div>
+        <main>
+            <div class="card">
+                <img src="./images/slide4.jpg" alt="normal menu">
+                <div class="blogContent">
+                    <h3>Main menu<span>Normal menu</span></h3>
+                    <a href="normal_menu.php" class="btn">Read more</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/slide6.jpg" alt="special menu">
+                <div class="blogContent">
+                    <h3>Main menu<span>ٍSnacks menu</span></h3>
+                    <a href="snacks_menu.php" class="btn">Read more</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/yum5.jpg" alt="special menu">
+                <div class="blogContent">
+                    <h3>Main menu<span>Desert menu</span></h3>
+                    <a href="deserts_menu.php" class="btn">Read more</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/drikmenu.jpg" alt="special menu">
+                <div class="blogContent">
+                    <h3>Main menu<span>Drinks menu</span></h3>
+                    <a href="drinks_menu.php" class="btn">Read more</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</section>
+
+
+</body>
+</html>

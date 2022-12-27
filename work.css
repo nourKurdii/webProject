@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+.first-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.first-container:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("images/trial.jpg") no-repeat center;
+    background-size: cover;
+    filter: blur(50px);
+    z-index: -1;
+}
+.contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    animation: scale 1.5s forwards;
+    animation-delay: .1s;
+}
+
+.left{
+    background: url("images/trial.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.right{
+    padding: 25px 40px;
+}
+
+h2{
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+}
+
+h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #c59d5f;
+}
+
+.field{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+    min-height: 150px;
+}
+
+.btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #c59d5f;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: #c59d5f;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+.container{
+    padding: 30px;
+    height: 350px;
+    width: 430px;
+    position: relative;
+}
+.container .wrapper{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wrapper.active{
+    border: none;
+}
+.wrapper .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper .icon{
+    font-size: 100px;
+    color: #c59d5f;
+}
+.wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #5B5B7B;
+}
+.wrapper #cancel-btn i{
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+    color: #c59d5f;
+    cursor: pointer;
+    display: none;
+}
+.wrapper.active:hover #cancel-btn i{
+    display: block;
+}
+.wrapper #cancel-btn i:hover{
+    color: #e74c3c;
+}
+.wrapper .file-name{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    color: #fff;
+    display: none;
+    background: #c59d5f;
+}
+.wrapper.active:hover .file-name{
+    display: block;
+}
+/*.container #custom-btn{*/
+/*    margin-top: 15px;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    position: center;*/
+/*    height: 35px;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    !*border-radius: 25px;*!*/
+/*    color: #fff;*/
+/*    font-size: 15px;*/
+/*    font-weight: 500;*/
+/*    letter-spacing: 1px;*/
+/*    !*text-transform: uppercase;*!*/
+/*    cursor: pointer;*/
+/*    background: #c59d5f;*/
+/*}*/
+@media screen and (max-width: 880px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        height: 300px;
+    }
+    /*.right input{*/
+    /*    font-size: 10px;*/
+    /*}*/
+     .container{
+        height: 200px;
+    }
+    .left .container .wrapper{
+        height: 200px;
+    }
+    .left .container .wrapper .image{
+        height: 200px;
+    }
+    .left .container .wrapper #custom-btn{
+        height: 200px;
+    }
+    .contact-box{
+        grid-template-columns: 1fr;
+        /*font-size:10px;*/
+    }
+}
+@keyframes scale {
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        opacity :1;
+        transform: scale(1);
+    }
+}
